@@ -8,6 +8,7 @@
     <link href="./public/css/style2.css" rel="stylesheet">
     <link rel="stylesheet" href="./public/fonts/sofia-pro/style.css">
     <link rel="stylesheet" href="./public/css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
     <style>
         .font-serif {
             font-family: 'Sofia Pro Regular';
@@ -25,28 +26,28 @@
             </div>
             <nav class="flex items-center">
                 <ul class="md:flex items-center mr-4 hidden">
-                    <li class="mr-5"><a href="#">Trading</a></li>
-                    <li class="mr-5"><a href="#">Services</a></li>
-                    <li class="mr-5"><a href="#">Contact</a></li>
-                    <li class="mr-5"><a href="#">About</a></li>
+                    <li class="mr-5"><a href="#trading">Trading</a></li>
+                    <li class="mr-5"><a href="#services">Services</a></li>
+                    <li class="mr-5"><a href="#contact">Contact</a></li>
+                    <li class="mr-5"><a href="#about">About</a></li>
                 </ul>
-                <button class="py-2 px-4 rounded-lg bg-black text-white">
+                <a href="./registration.html" class="py-2 px-4 inline-block rounded-lg bg-black text-white">
                     Sign Up
-                </button>
+                </a>
             </nav>
         </div>
     </header>
     <aside class="md:hidden block navbar sticky top-0 left-0 z-20">
         <ul class="max-w-5xl px-4 md:px-0 mx-auto md:hidden items-center py-4 border-b-1 justify-center flex overflow-x-auto">
-            <li class="mr-5"><a href="#">Home</a></li>
-            <li class="mr-5"><a href="#">Services</a></li>
-            <li class="mr-5"><a href="#">Contact</a></li>
-            <li class="mr-5"><a href="#">About</a></li>
+            <li class="mr-5"><a href="#trading">Trading</a></li>
+            <li class="mr-5"><a href="#services">Services</a></li>
+            <li class="mr-5"><a href="#contact">Contact</a></li>
+            <li class="mr-5"><a href="#about">About</a></li>
         </ul>
     </aside>
     <!-- navbar end -->
     <!-- hero start -->
-    <section class="px-3 bg-purple-100" style="max-height: 600px">
+    <section class="px-3 bg-purple-100" style="max-height: 600px" id="home">
         <div class="max-w-3xl mx-auto py-20">
             <h1 class="text-3xl mb-5 text-center md:text-5xl font-bold">
                 The most efficient <br> <span
@@ -58,11 +59,11 @@
                 recharge card purchase / sales
             </p>
             <div class="grid grid-cols-1 md:grid-cols-2 mb-5 gap-3 max-w-lg mx-auto">
-                <a href="#"
+                <a href="./registration.html"
                     class="py-3 inline-block font-bold px-4 text-center rounded-lg bg-black text-white hover:bg-purple-700">
                     Sign up
                 </a>
-                <a href="#"
+                <a href="#contact"
                     class="py-3 px-4 inline-block font-bold text-center rounded-lg border-2 border-black text-black hover:text-purple-700 hover:border-purple-700">
                     Contact us
                 </a>
@@ -72,7 +73,7 @@
     </section>
     <!-- hero end -->
     <!-- testimony start -->
-    <section class="px-4">
+    <section class="px-4" id="testimony">
         <div class="max-w-5xl mx-auto pt-40 pb-20 flex flex-wrap justify-between">
             <div class="md:w-5/12 w-full mb-5">
                 <p class="text-xs n uppercase tracking-widest mb-2">Testimonial</p>
@@ -107,9 +108,9 @@
     </section>
     <!-- testimony end -->
     <!-- trading start -->
-    <section class="px-4 bg-black">
+    <section class="px-4 bg-black" id="trading">
         <div class="max-w-5xl mx-auto py-20 flex flex-wrap justify-between">
-            <img class="md:w-5/12 w-full mb-5 rounded-2xl" />
+            <img src="./public/img/trading.jpg" class="md:w-5/12 w-full mb-5 rounded-2xl" />
             <div class="md:w-6/12 w-full">
                 <p class="text-xs n uppercase text-gray-50 tracking-widest mb-2">Trading</p>
                 <h2 class="text-3xl mb-10 md:text-5xl text-white font-bold">
@@ -152,6 +153,7 @@
     <!-- trading end -->
     <!-- services start -->
     <section class="px-4 bg-black relative"
+        id="services"
         style="background-image: url('https://images.unsplash.com/photo-1556745753-b2904692b3cd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y3VzdG9tZXIlMjBzZXJ2aWNlfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80');background-size: cover">
         <div class="w-full h-full top-0 left-0 absolute bg-purple-600 opacity-90">
         </div>
@@ -184,7 +186,7 @@
     </section>
     <!-- services end -->
     <!-- about start -->
-    <section class="px-4 relative">
+    <section class="px-4 relative" id="about">
         <div class="max-w-5xl mx-auto py-20 relative">
             <p class="text-xs uppercase text-black tracking-widest mb-2">About</p>
             <h2 class="text-3xl mb-10 md:text-5xl text-black font-bold">
@@ -219,8 +221,8 @@
     </section>
     <!-- about end -->
     <!-- footer start -->
-    <footer class="px-4 relative">
-    <div class="max-w-5xl shadow-2xl mx-auto py-10 mt-20 rounded-3xl mt-2 px-6 bg-black">
+    <footer class="px-4 relative" id="contact">
+    <div class="max-w-5xl shadow-2xl mx-auto py-10 mt-20 rounded-3xl px-6 bg-black">
         <p class="text-xs uppercase text-white tracking-widest mb-2">Contact</p>
         <h2
             class="text-3xl md:text-5xl font-bold bg-clip-text bg-gradient-to-r from-purple-900 to-yellow-500 text-transparent">
@@ -241,14 +243,29 @@
             </div>
         </div>
     </div>
-    <div class="max-w-5xl mx-auto py-10 flex justify-between">
-        <span class="font-bold">PMC</span>
-        <div class="flex items-center">
-            <a href="#" class="mr-3"></a>
+    <div class="max-w-5xl mx-auto py-10 flex items-center flex-col md:flex-row md:justify-between">
+        <div>
+            <p class="font-bold">PMC</p>
+        </div>
+        <div>
+            <span class="text-sm text-gray-600">PMC Global Trading © 2012</span>
+        </div>
+        <div class="flex items-center mt-5 md:mt-0">
+            <a href="#" class="mr-8 text-sm text-gray-600 hover:text-gray-800">
+                <i data-feather="facebook"></i>
+            </a>
+            <a href="#" class="text-sm text-gray-600 hover:text-gray-800">
+                <i data-feather="twitter"></i>
+            </a>
         </div>
     </div>
     </footer>
     <!-- footer end -->
+    <!-- feather-icon start-->
+    <script>
+        feather.replace()
+    </script>
+    <!-- feather-icon end-->
 </body>
 
 </html>
