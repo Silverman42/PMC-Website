@@ -1,0 +1,359 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.notification-bell{
+    @apply text-4xl text-blue-600 relative;
+}
+
+.notification-bell.active::before{
+    content: '';
+    position: absolute;
+    right: 4px;
+    top: 5px;
+    @apply rounded-full w-2 h-2 bg-red-600;
+}
+
+.avatar{
+    @apply w-10 h-10 object-cover rounded-2xl ring-2 ring-blue-500 ring-opacity-50;
+}
+
+.avatar-sm{
+    @apply w-20 h-20;
+}
+
+.avatar-md{
+    @apply w-32 h-32;
+}
+
+.avatar-lg{
+    @apply w-52 h-52;
+}
+
+.avatar--placeholder{
+    @apply w-10 h-10 text-white bg-blue-700 flex items-center justify-center uppercase rounded-2xl ring-2 ring-blue-500 ring-opacity-50;
+}
+
+.sidebar{
+    @apply flex flex-col items-center sticky left-0 top-0 py-6 text-center text-xs bg-white w-24 border-r border-blue-100 shadow-xl;
+}
+
+.sidebar .menu-button>span{
+    @apply block p-1 mb-2 rounded-full
+}
+
+.sidebar .menu-button>span:first-child{
+    @apply bg-blue-600 w-full
+}
+.sidebar .menu-button>span:nth-child(2){
+    @apply bg-blue-300 w-2/3;
+}
+.sidebar .menu-button>span:last-child{
+    @apply bg-blue-600 w-1/2;
+}
+.sidebar .sidebar-link,
+.sidebar .sidebar-dropdown{
+    @apply flex flex-col items-center w-full text-gray-400 mb-8 hover:text-blue-600
+}
+
+.sidebar .sidebar-dropdown+.sublink, .sidebar .sidebar-dropdown .indicator{
+    @apply hidden;
+}
+
+.sidebar.open{
+    @apply items-start fixed h-screen overflow-y-auto py-6 w-48 z-20;
+}
+
+.sidebar.open .menu-button{
+    @apply ml-3
+}
+.sidebar.open .menu-button>span{
+    @apply mb-0
+}
+.sidebar.open .menu-button>span:first-child{
+    transform-origin: center;
+    transform: rotate(-135deg);
+    @apply bg-blue-600 w-full
+}
+.sidebar.open .menu-button>span:nth-child(2){
+    margin-top: -6px;
+    transform-origin: center;
+    transform: rotate(135deg);
+    @apply bg-blue-300 w-full;
+}
+.sidebar.open .menu-button>span:last-child{
+    @apply hidden;
+}
+
+.sidebar.open .sidebar-link,
+.sidebar.open .sidebar-dropdown{
+    @apply flex-row ;
+}
+
+.sidebar.open .sidebar-link>.title,
+.sidebar.open .sidebar-dropdown>.title{
+    @apply ml-3 mb-2 text-lg;
+}
+
+.sidebar.open .sidebar-
+ .indicator{
+    @apply ml-auto block text-lg;
+}
+
+.sidebar.open .sidebar-dropdown+.sublink.show{
+    @apply block w-full mb-9 text-sm -mt-5 text-gray-500;
+}
+.sidebar.open .sidebar-dropdown+.sublink.show li{
+    @apply mb-5 text-left;
+}
+.sidebar.open .sidebar-dropdown+.sublink.show li>a:hover{
+    @apply text-blue-600;
+}
+
+/* Custom radio */
+.custom-radio{
+    @apply cursor-pointer
+}
+.custom-radio>input{
+    @apply hidden
+}
+.custom-radio>input+div{
+    @apply text-gray-500
+}
+.custom-radio>input:checked+div{
+    @apply text-blue-500
+}
+
+/* Custom checkbox */
+.custom-checkbox{
+    @apply flex justify-center items-center cursor-pointer w-5 h-5 rounded-md border-2 border-blue-500
+}
+.custom-checkbox>input[type="checkbox"],
+.custom-checkbox>input[type="radio"]{
+    @apply hidden
+}
+.custom-checkbox>input+span{
+    @apply block w-3 h-3 rounded-sm relative bg-transparent
+}
+.custom-checkbox>input:checked+span{
+    @apply bg-blue-500
+}
+
+/*Pagination*/
+.paginate{
+    @apply rounded-md inline-block text-gray-600 px-3 py-2;
+}
+.paginate:hover{
+    @apply text-blue-600 bg-blue-200;
+}
+.paginate--active{
+    @apply bg-blue-200 text-blue-800
+}
+.paginate--disabled{
+    @apply text-gray-400
+}
+
+/* Modal */
+.modal-background{
+    background: rgba( 0, 0, 0, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    @apply overflow-y-auto w-screen h-screen z-40 fixed top-0 left-0 bottom-0 p-3;
+}
+
+.modal{
+    @apply max-w-3xl mx-auto mt-10 bg-white rounded-lg border-2 border-blue-200 mb-32;
+}
+
+.modal-lg{
+    @apply w-full mx-auto mt-1 rounded-lg border-2 border-blue-200 mb-32;
+}
+
+.modal-head{
+    @apply flex items-center justify-between px-4 py-3 border-b border-gray-300 ;
+}
+
+.modal-body{
+    @apply px-4 py-3;
+}
+
+
+/* Forms Input */
+.form-input,
+.form-textarea
+{
+    @apply w-full border-2 border-gray-200 bg-gray-100 p-2 h-9 rounded-md
+}
+
+.form-textarea{
+    @apply h-auto
+}
+
+.form-input.form-white,
+.form-textarea.form-white{
+    @apply bg-white
+}
+
+.form-input:hover,
+.form-input:focus,
+.form-textarea:hover,
+.form-textarea:focus{
+    @apply border-blue-500 ring-2 ring-blue-300
+}
+
+/* Dropdown */
+.dropdown{
+    @apply relative w-auto
+}
+.dropdown>input+.dropdown-options,
+.dropdown>input+.dropdown-options.dropdown__not-floating
+{
+    @apply hidden
+}
+.dropdown>input:checked+.dropdown-options{
+    @apply absolute block top-full border-2 border-blue-200 shadow-md p-3 rounded-md max-h-72 overflow-y-auto bg-white z-10
+}
+
+.dropdown>input:checked+.dropdown-options.dropdown__not-floating{
+    @apply relative h-auto w-full border-0 top-0 shadow-none p-0
+}
+.dropdown>input:checked+.dropdown-options.left{
+    @apply left-0
+}
+.dropdown>input:checked+.dropdown-options.right{
+    @apply right-0
+}
+
+/* Menu Button */
+.page-button{
+    @apply flex flex-col p-2 items-center bg-white rounded-lg border-2 border-blue-200 text-gray-600
+}
+.page-button>p{
+    @apply text-gray-400;
+}
+.page-button:hover, .page-button.active{
+    @apply border-blue-500 text-blue-600
+}
+.page-button:hover>p, .page-button.active>p{
+    @apply text-blue-600
+}
+
+/* Switch */
+.switch{
+    @apply cursor-pointer;
+}
+.switch>input[type=checkbox]{
+    @apply hidden
+}
+.switch>input[type=checkbox]+span{
+    @apply rounded-full inline-block p-1 border-2 border-gray-400 text-gray-400 w-20 overflow-x-hidden
+}
+.switch>input[type=checkbox]+span>span{
+    @apply rounded-full block m-0 p-0 bg-gray-400 w-4 h-4 relative transition-transform ease-in-out duration-300 delay-300
+}
+.switch>input[type=checkbox]+span>span::after{
+    content: 'Inactive';
+    left: 120%;
+    @apply text-xs not-italic absolute top-0 transition-all ease-in-out duration-300
+}
+
+.switch>input[type=checkbox]:checked+span{
+    @apply rounded-full block p-1 border-2 border-green-400 bg-green-100 text-green-400 w-20
+}
+.switch>input[type=checkbox]:checked+span>span{
+    transform: translateX(3.2rem);
+    -webkit-transform: translateX(3.2rem);
+    @apply rounded-full block m-0 p-0 bg-green-400 w-4 h-4 relative
+}
+.switch>input[type=checkbox]:checked+span>span::after{
+    content: 'Active';
+    left: -240%;
+    writing-mode: unset;
+    @apply text-xs not-italic absolute top-0
+}
+
+/* Stepper */
+.stepper {
+    @apply flex relative w-full justify-between;
+}
+.stepper li{
+    @apply font-bold text-center relative list-none text-gray-400 text-sm;
+}
+
+.stepper li:before {
+    /* CSS for creating steper block before the li item*/
+    content: '';
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    z-index: 5;
+    margin: 0 auto 10px auto;
+    @apply block relative rounded-full bg-white border-2 border-blue-500 shadow-lg
+}
+
+.stepper li.active:before{
+    content: '🗸';
+    line-height: 30px;
+    @apply bg-blue-500 text-white;
+}
+
+.stepper li.active{
+    @apply text-blue-600;
+}
+
+.stepper li:after {
+    /* CSS for creating horizontal line*/
+    content:'';
+    height:2px;
+    top: 15px;
+    left: -50%;
+    @apply absolute w-full bg-white border border-blue-200
+}
+    
+.stepper li:first-child:after{
+    content: none
+}
+
+/* ImageRadio */
+.image-radio{
+    @apply block p-0 cursor-pointer;
+}
+.image-radio>input[type='radio']{
+    @apply hidden
+}
+.image-radio .body{
+    @apply rounded-lg border-4 border-blue-200 block relative p-0
+}
+
+.image-radio input[type='radio']:checked+.body,
+.image-radio:hover .body{
+    @apply border-blue-600
+}
+
+.image-radio input[type='radio']:checked+.body::after{
+    content: '🗸';
+    height: 25px;
+    width: 25px;
+    line-height: 25px;
+    left: 42%;
+    @apply text-center rounded-full bg-blue-500 shadow-lg -bottom-3 absolute text-white
+}
+
+/* Tabs */
+.tab-container{
+    @apply flex items-center px-3
+}
+.tab.active{
+    @apply py-3 inline-block font-bold capitalize border-b-4 border-blue-500 text-blue-500 
+}
+.tab.active:hover{
+    @apply text-blue-700
+}
+.tab{
+    @apply py-3 inline-block border-b-4 border-transparent text-gray-500 font-bold
+}
+
+.tab:hover{
+    @apply text-blue-700
+}
