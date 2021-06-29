@@ -28,12 +28,12 @@
             </div>
             <nav class="flex items-center">
                 <ul class="md:flex items-center mr-4 hidden">
-                    <li class="mr-5"><a href="#trading">Trading</a></li>
-                    <li class="mr-5"><a href="#services">Services</a></li>
-                    <li class="mr-5"><a href="#contact">Contact</a></li>
-                    <li class="mr-5"><a href="#about">About</a></li>
+                    <li class="mr-5"><a href="#trading" class="hover:text-purple-500">Trading</a></li>
+                    <li class="mr-5"><a href="#services" class="hover:text-purple-500">Services</a></li>
+                    <li class="mr-5"><a href="#contact" class="hover:text-purple-500">Contact</a></li>
+                    <li class="mr-5"><a href="#about" class="hover:text-purple-500">About</a></li>
                 </ul>
-                <a href="./registration.html" class="py-2 px-4 inline-block rounded-lg bg-black text-white">
+                <a href="./registration.html" class="py-2 px-4 inline-block rounded-lg bg-black text-white hover:bg-purple-700">
                     Sign Up
                 </a>
             </nav>
@@ -42,10 +42,10 @@
     <aside class="md:hidden block navbar sticky top-0 left-0 z-20">
         <ul
             class="max-w-5xl px-4 md:px-0 mx-auto md:hidden items-center py-4 border-b-1 justify-center flex overflow-x-auto">
-            <li class="mr-5"><a href="#trading">Trading</a></li>
-            <li class="mr-5"><a href="#services">Services</a></li>
-            <li class="mr-5"><a href="#contact">Contact</a></li>
-            <li class="mr-5"><a href="#about">About</a></li>
+            <li class="mr-5"><a href="#trading" class="hover:text-purple-500">Trading</a></li>
+            <li class="mr-5"><a href="#services" class="hover:text-purple-500">Services</a></li>
+            <li class="mr-5"><a href="#contact" class="hover:text-purple-500">Contact</a></li>
+            <li class="mr-5"><a href="#about" class="hover:text-purple-500">About</a></li>
         </ul>
     </aside>
     <!-- navbar end -->
@@ -54,8 +54,8 @@
         <div class="max-w-3xl mx-auto py-20">
             <h1 class="text-3xl mb-5 text-center md:text-5xl font-bold">
                 The most efficient <br> <span
-                    class="bg-clip-text bg-gradient-to-r from-purple-900 to-yellow-500 text-transparent">trading</span>
-                company <br> you can trust
+                    class="bg-clip-text bg-gradient-to-r from-purple-900 to-yellow-500 text-transparent" id="serviceType">trading</span>
+                agents <br> you can trust
             </h1>
             <p class="text-lg mb-5 max-w-lg mx-auto text-center">
                 PMC trading experts deliver bespoke services such buying / betting sure bets, forex trading, and
@@ -222,20 +222,17 @@
                 <div class="w-full md:w-3/12 mb-4 md:mr-4">
                     <span class="w-10 h-10 rounded-full block bg-yellow-500 mb-3"></span>
                     <h3 class="font-bold text-white mb-3">Trading</h3>
-                    <p class="text-purple-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-                        facilis! </p>
+                    <p class="text-purple-200">We trade and make private consultaions for forex trade </p>
                 </div>
                 <div class="w-full md:w-3/12 mb-4 md:mr-4">
                     <span class="w-10 h-10 rounded-full block bg-yellow-500 mb-3"></span>
                     <h3 class="font-bold text-white mb-3">Betting</h3>
-                    <p class="text-purple-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-                        facilis! </p>
+                    <p class="text-purple-200">We deal in buying and betting sure odds online in all world sport league</p>
                 </div>
                 <div class="w-full md:w-3/12 mb-4 md:mr-4">
                     <span class="w-10 h-10 rounded-full block bg-yellow-500 mb-3"></span>
                     <h3 class="font-bold text-white mb-3">Telecommunication</h3>
-                    <p class="text-purple-200">Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore,
-                        facilis! </p>
+                    <p class="text-purple-200">We also deal in the purchase and selling of recharge cards in bulk from major telecommunication companies </p>
                 </div>
             </div>
         </div>
@@ -291,11 +288,11 @@
                 </div>
                 <div class="w-full mb-6 md:w-3/12">
                     <span class="text-xs uppercase text-gray-500 tracking-widest mb-2">PHONE</span>
-                    <p class="text-white">+2348066533666</p>
+                    <a href="tel:+2348032289983" class="text-white block hover:text-purple-700">+2348032289983</a>
                 </div>
                 <div class="w-full mb-6 md:w-3/12">
                     <span class="text-xs uppercase text-gray-500 tracking-widest mb-2">email</span>
-                    <p class="text-white">Pmctradeexperts@gmail.com</p>
+                    <a href="mailto:Pmctradeexperts@gmail.com" class="text-white block hover:text-purple-700">Pmctradeexperts@gmail.com</a>
                 </div>
             </div>
         </div>
@@ -304,7 +301,7 @@
                 <p class="font-bold">PMC</p>
             </div>
             <div>
-                <span class="text-sm text-gray-600">PMC Global Trading © 2012</span>
+                <div class="text-sm text-gray-600">PMC Global Trading © <span id="copyDate">2012</span></div>
             </div>
             <div class="flex items-center mt-5 md:mt-0">
                 <a href="#" class="mr-8 text-sm text-gray-600 hover:text-gray-800">
